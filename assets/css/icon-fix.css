@@ -1,0 +1,56 @@
+
+/* Font Awesome Mapping for Icomoon classes */
+[class^="icon-"], [class*=" icon-"] {
+    font-family: inherit; /* Fallback */
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* User Interface Icons */
+.icon-grip-lines-solid:before { content: "\f0c9"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-close:before { content: "\f00d"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-long-arrow-alt-up-solid:before { content: "\f062"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-long-arrow-alt-down-solid:before { content: "\f063"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-long-arrow-alt-right-solid:before { content: "\f061"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-long-arrow-alt-left-solid:before { content: "\f060"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-angle-down-solid:before { content: "\f107"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-angle-up-solid:before { content: "\f106"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-angle-left-solid:before { content: "\f104"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-angle-right-solid:before { content: "\f105"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-star-solid:before { content: "\f005"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-star:before { content: "\f005"; font-family: "Font Awesome 6 Free"; font-weight: 400; }
+.icon-check-solid:before { content: "\f00c"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-search-solid:before { content: "\f002"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-paper-plane:before { content: "\f1d8"; font-family: "Font Awesome 6 Free"; font-weight: 400; }
+.icon-envelope-solid:before { content: "\f0e0"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-headset-solid:before { content: "\f590"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-phone-alt-solid:before { content: "\f879"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-map-marker-solid:before { content: "\f3c5"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-arrow-top-right:before { content: "\f35d"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+
+/* Social Icons */
+.icon-instagram:before { content: "\f16d"; font-family: "Font Awesome 6 Brands"; }
+.icon-facebook-f:before { content: "\f39e"; font-family: "Font Awesome 6 Brands"; }
+.icon-twitter:before, .icon-twitter-x:before { content: "\e61b"; font-family: "Font Awesome 6 Brands"; }
+.icon-linkedin-in:before { content: "\f0e1"; font-family: "Font Awesome 6 Brands"; }
+.icon-youtube:before { content: "\f167"; font-family: "Font Awesome 6 Brands"; }
+.icon-github:before { content: "\f09b"; font-family: "Font Awesome 6 Brands"; }
+.icon-dribbble:before { content: "\f17d"; font-family: "Font Awesome 6 Brands"; }
+.icon-behance:before { content: "\f1b4"; font-family: "Font Awesome 6 Brands"; }
+
+/* Feature Icons */
+.icon-robot-solid:before { content: "\f544"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-bolt-solid:before { content: "\f0e7"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-building:before { content: "\f1ad"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-bullseye-solid:before { content: "\f140"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-tachometer-alt-solid:before { content: "\f3fd"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-shield-alt-solid:before { content: "\f3ed"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-clipboard-check-solid:before { content: "\f46c"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-user-friends-solid:before { content: "\f500"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-paperclip-solid:before { content: "\f0c6"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-plug-solid:before { content: "\f1e6"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-user-check-solid:before,
+.icon-user-check-solid-1:before { content: "\f4fc"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-book-solid:before { content: "\f02d"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-mobile-alt-solid:before { content: "\f3cd"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+.icon-coins-solid:before { content: "\f51e"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
