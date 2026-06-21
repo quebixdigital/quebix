@@ -25,7 +25,7 @@ const headerTemplate = `
                     </ul>
                 </div>
                 <a href="contact.html" class="tf-btn d-lg-flex d-none">
-                    Let's Connect
+                    Start a project
                 </a>
                 <a href="#" class="tf-btn open-mb-menu mobile-menu d-lg-none d-flex">
                     <i class="icon icon-grip-lines-solid"></i>
