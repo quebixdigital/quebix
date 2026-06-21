@@ -197,6 +197,80 @@ const modalStyles = `
   #projectInquiryModal .is-invalid {
     border-color: var(--brand, #FD3A25) !important;
   }
+
+  /* Nice-select overrides to match other fields perfectly */
+  #projectInquiryModal .nice-select {
+    width: 100% !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    padding: 12px 16px !important;
+    color: #ffffff !important;
+    font-family: "Urbanist", sans-serif !important;
+    font-size: 15px !important;
+    height: 48px !important;
+    line-height: 24px !important;
+    float: none !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    transition: all 0.3s ease !important;
+    margin: 0 !important;
+  }
+  
+  #projectInquiryModal .nice-select:focus,
+  #projectInquiryModal .nice-select.open {
+    border-color: var(--brand, #FD3A25) !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(253, 58, 37, 0.25) !important;
+  }
+
+  #projectInquiryModal .nice-select .current {
+    color: #ffffff !important;
+  }
+
+  #projectInquiryModal .nice-select::before {
+    content: "\\e906" !important;
+    font-family: "icomoon" !important;
+    position: absolute !important;
+    right: 16px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    font-size: 10px !important;
+    color: var(--neutral-400) !important;
+    display: block !important;
+  }
+  
+  #projectInquiryModal .nice-select.open::before {
+    transform: translateY(-50%) rotate(180deg) !important;
+  }
+
+  #projectInquiryModal .nice-select .list {
+    background-color: #0c0c0e !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    width: 100% !important;
+    margin-top: 4px !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5) !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+  
+  #projectInquiryModal .nice-select .option {
+    padding: 10px 16px !important;
+    color: var(--neutral-300) !important;
+    font-size: 14px !important;
+    transition: all 0.2s ease !important;
+    text-align: left !important;
+  }
+  
+  #projectInquiryModal .nice-select .option:hover,
+  #projectInquiryModal .nice-select .option.focus,
+  #projectInquiryModal .nice-select .option.selected.focus {
+    background-color: rgba(253, 58, 37, 0.1) !important;
+    color: #ffffff !important;
+  }
 `;
 
 const modalHTML = `
