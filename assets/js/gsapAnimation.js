@@ -486,11 +486,12 @@
         if (!$(".img-grow-1")) return;
         var grow1 = document.querySelectorAll(".img-grow-1");
         grow1.forEach((item) => {
+            var section = item.closest(".section-tools");
             gsap.to(item, {
                 transform: "scale(1.15) rotate(30deg)",
                 ease: "none",
                 scrollTrigger: {
-                    trigger: item,
+                    trigger: section || item,
                     scrub: 2,
                     start: "top 90%",
                     end: "top center",
@@ -498,13 +499,14 @@
             });
         });
         if (!$(".img-grow-2")) return;
-        var grow1 = document.querySelectorAll(".img-grow-2");
-        grow1.forEach((item) => {
+        var grow2 = document.querySelectorAll(".img-grow-2");
+        grow2.forEach((item) => {
+            var section = item.closest(".section-tools");
             gsap.to(item, {
                 transform: "scale(1.15) rotate(-12deg)",
                 ease: "none",
                 scrollTrigger: {
-                    trigger: item,
+                    trigger: section || item,
                     scrub: 2,
                     start: "top 90%",
                     end: "top center",
@@ -512,13 +514,14 @@
             });
         });
         if (!$(".img-grow-3")) return;
-        var grow1 = document.querySelectorAll(".img-grow-3");
-        grow1.forEach((item) => {
+        var grow3 = document.querySelectorAll(".img-grow-3");
+        grow3.forEach((item) => {
+            var section = item.closest(".section-tools");
             gsap.to(item, {
                 transform: "scale(1.15) rotate(-15deg)",
                 ease: "none",
                 scrollTrigger: {
-                    trigger: item,
+                    trigger: section || item,
                     scrub: 2,
                     start: "top 90%",
                     end: "top center",
@@ -526,13 +529,14 @@
             });
         });
         if (!$(".img-grow-4")) return;
-        var grow1 = document.querySelectorAll(".img-grow-4");
-        grow1.forEach((item) => {
+        var grow4 = document.querySelectorAll(".img-grow-4");
+        grow4.forEach((item) => {
+            var section = item.closest(".section-tools");
             gsap.to(item, {
                 transform: "scale(1.15) rotate(-15deg)",
                 ease: "none",
                 scrollTrigger: {
-                    trigger: item,
+                    trigger: section || item,
                     scrub: 2,
                     start: "top 90%",
                     end: "top center",
@@ -540,13 +544,14 @@
             });
         });
         if (!$(".img-grow-5")) return;
-        var grow1 = document.querySelectorAll(".img-grow-5");
-        grow1.forEach((item) => {
+        var grow5 = document.querySelectorAll(".img-grow-5");
+        grow5.forEach((item) => {
+            var section = item.closest(".section-tools");
             gsap.to(item, {
                 transform: "scale(1.15) rotate(15deg)",
                 ease: "none",
                 scrollTrigger: {
-                    trigger: item,
+                    trigger: section || item,
                     scrub: 2,
                     start: "top 90%",
                     end: "top center",
@@ -554,13 +559,14 @@
             });
         });
         if (!$(".img-grow-6")) return;
-        var grow1 = document.querySelectorAll(".img-grow-6");
-        grow1.forEach((item) => {
+        var grow6 = document.querySelectorAll(".img-grow-6");
+        grow6.forEach((item) => {
+            var section = item.closest(".section-tools");
             gsap.to(item, {
                 transform: "scale(1.1) rotate(30deg)",
                 ease: "none",
                 scrollTrigger: {
-                    trigger: item,
+                    trigger: section || item,
                     scrub: 2,
                     start: "top 90%",
                     end: "top center",
@@ -569,8 +575,8 @@
         });
 
         if (!$(".grow-1")) return;
-        var grow2 = document.querySelectorAll(".grow-1");
-        grow2.forEach((item) => {
+        var grow_1 = document.querySelectorAll(".grow-1");
+        grow_1.forEach((item) => {
             gsap.to(item, {
                 transform: "scale(1.2)",
                 ease: "none",

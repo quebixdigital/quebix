@@ -7160,6 +7160,8 @@ button.animate-btn::after,
     position: absolute;
     box-shadow: 4.29817px 18.6254px 28.6545px rgba(0, 0, 0, 0.1);
     border-radius: 11px;
+    will-change: transform;
+    backface-visibility: hidden;
 }
 
 .section-tools .img-1 {
