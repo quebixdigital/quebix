@@ -231,7 +231,7 @@ const modalStyles = `
   }
 
   #projectInquiryModal .nice-select::before {
-    content: "\\e906" !important;
+    content: "\\e901" !important;
     font-family: "icomoon" !important;
     position: absolute !important;
     right: 16px !important;
@@ -240,6 +240,10 @@ const modalStyles = `
     font-size: 10px !important;
     color: var(--neutral-400) !important;
     display: block !important;
+  }
+  
+  #projectInquiryModal .nice-select::after {
+    display: none !important;
   }
   
   #projectInquiryModal .nice-select.open::before {
@@ -418,11 +422,16 @@ document.addEventListener("DOMContentLoaded", function () {
   modalWrapper.innerHTML = modalHTML;
   document.body.appendChild(modalWrapper.firstElementChild);
 
+  // Initialize Nice Select on the select elements in the modal
+  if (window.jQuery && $.fn.niceSelect) {
+    $('#projectInquiryModal select').niceSelect();
+  }
+
   // Toggle custom budget input display
-  const budgetSelect = document.getElementById("modalBudget");
+  const $budgetSelect = $("#modalBudget");
   const customBudgetInput = document.getElementById("modalCustomBudget");
-  if (budgetSelect && customBudgetInput) {
-    budgetSelect.addEventListener("change", function () {
+  if ($budgetSelect.length && customBudgetInput) {
+    $budgetSelect.on("change", function () {
       if (this.value === "custom") {
         customBudgetInput.style.display = "block";
         customBudgetInput.focus();
