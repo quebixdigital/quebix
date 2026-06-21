@@ -273,7 +273,10 @@ const modalHTML = `
                         <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000</option>
                         <option value="₹1,00,000 - ₹5,00,000">₹1,00,000 - ₹5,00,000</option>
                         <option value="Above ₹5,00,000">Above ₹5,00,000</option>
+                        <option value="custom">Custom / Enter Manually...</option>
                       </select>
+                      <input type="text" id="modalCustomBudget" class="inquiry-input mt-2" placeholder="Enter custom budget (e.g. ₹75,000)" style="display: none;">
+                      <div class="error-message" id="err-budget">Please select or enter your budget.</div>
                     </div>
                   </div>
                 </div>
@@ -341,6 +344,24 @@ document.addEventListener("DOMContentLoaded", function () {
   modalWrapper.innerHTML = modalHTML;
   document.body.appendChild(modalWrapper.firstElementChild);
 
+  // Toggle custom budget input display
+  const budgetSelect = document.getElementById("modalBudget");
+  const customBudgetInput = document.getElementById("modalCustomBudget");
+  if (budgetSelect && customBudgetInput) {
+    budgetSelect.addEventListener("change", function () {
+      if (this.value === "custom") {
+        customBudgetInput.style.display = "block";
+        customBudgetInput.focus();
+      } else {
+        customBudgetInput.style.display = "none";
+        customBudgetInput.value = "";
+        customBudgetInput.classList.remove("is-invalid");
+        const errBudget = document.getElementById("err-budget");
+        if (errBudget) errBudget.style.display = "none";
+      }
+    });
+  }
+
   const modalEl = document.getElementById("projectInquiryModal");
   let inquiryModalInstance = null;
 
@@ -366,6 +387,14 @@ document.addEventListener("DOMContentLoaded", function () {
           err.style.display = "none";
         }
       });
+      const customBudgetInputEl = document.getElementById("modalCustomBudget");
+      if (customBudgetInputEl) {
+        customBudgetInputEl.classList.remove("is-invalid");
+      }
+      const errBudget = document.getElementById("err-budget");
+      if (errBudget) {
+        errBudget.style.display = "none";
+      }
 
       let isValid = true;
 
@@ -402,6 +431,21 @@ document.addEventListener("DOMContentLoaded", function () {
         isValid = false;
       }
 
+      // Validate custom budget
+      const budgetSelectEl = document.getElementById("modalBudget");
+      const customBudgetEl = document.getElementById("modalCustomBudget");
+      if (budgetSelectEl && budgetSelectEl.value === "custom") {
+        if (!customBudgetEl.value.trim()) {
+          customBudgetEl.classList.add("is-invalid");
+          const errBudgetEl = document.getElementById("err-budget");
+          if (errBudgetEl) {
+            errBudgetEl.textContent = "Please enter your custom budget.";
+            errBudgetEl.style.display = "block";
+          }
+          isValid = false;
+        }
+      }
+
       if (!isValid) {
         return;
       }
@@ -414,6 +458,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
       const formData = new FormData(form);
       const dataObj = Object.fromEntries(formData.entries());
+
+      // Override budget if custom is typed manually
+      if (dataObj.budget_range === "custom") {
+        const customBudgetVal = document.getElementById("modalCustomBudget")?.value.trim() || "";
+        dataObj.budget_range = customBudgetVal;
+      }
 
       // Future backend/API endpoint integration prepared
       fetch("https://formsubmit.co/ajax/quebixofficial@gmail.com", {
