@@ -75,7 +75,7 @@ quebix/
 
 **Quebix Digital** is dedicated to delivering impact through precision. We are proudly delivering digital solutions all over Maharashtra.
 
-- **CEO**: Srushti Naphade
+- **CEO**: Durgesh Sonar
 - **Phone**: [+91 77699 71133](tel:+917769971133)
 - **Email**: [quebixofficial@gmail.com](mailto:quebixofficial@gmail.com)
 - **Location**: Pune, Maharashtra

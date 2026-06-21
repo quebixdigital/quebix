@@ -94,11 +94,11 @@ const headerTemplate = `
                                 </p>
                             </div>
                             <div class="right">
-                                <a href="https://www.instagram.com/" target="_blank" class="tf-link-icon text-caption text-neutral-200">
+                                <a href="https://www.instagram.com/quebixdigital.in/" target="_blank" class="tf-link-icon text-caption text-neutral-200">
                                     <i class="icon icon-arrow-top-right"></i>
                                     INSTAGRAM
                                 </a>
-                                <a href="https://www.linkedin.com/" target="_blank" class="tf-link-icon text-caption text-neutral-200">
+                                <a href="https://www.linkedin.com/company/quebixdigital" target="_blank" class="tf-link-icon text-caption text-neutral-200">
                                     <i class="icon icon-arrow-top-right"></i>
                                     LINKEDIN
                                 </a>
