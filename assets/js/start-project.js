@@ -210,7 +210,7 @@ const modalHTML = `
       <div class="modal-body p-4">
         <div class="row g-4">
           <!-- Left side: Inquiry Form -->
-          <div class="col-lg-7">
+          <div class="col-lg-8">
             <div id="formContainer">
               <h4 class="fw-semibold text-white mb-3" style="font-size: 20px;">Tell Us About Your Project</h4>
               <form id="startProjectForm">
@@ -289,42 +289,11 @@ const modalHTML = `
             </div>
           </div>
 
-          <!-- Right side: Pricing and Help Info -->
-          <div class="col-lg-5 ps-lg-4 border-start-lg" style="border-color: rgba(255,255,255,0.06);">
-            <div class="pricing-card-wrap">
-              <h4 class="fw-semibold text-white mb-3" style="font-size: 20px;">Pricing Plans Overview</h4>
-              
-              <!-- Plan 1 -->
-              <div class="pricing-mini-card">
-                <div class="plan-price fw-bold">₹9,900 <span>/ year</span></div>
-                <div class="fw-semibold text-white mt-1" style="font-size: 14px;">Starter Plan</div>
-                <ul>
-                  <li><i class="fas fa-check-circle"></i> Discovery workshop & scope</li>
-                  <li><i class="fas fa-check-circle"></i> Complete UI/UX concept mockup</li>
-                  <li><i class="fas fa-check-circle"></i> 1 data source & custom integration</li>
-                  <li><i class="fas fa-check-circle"></i> 12 months hosting / server setup</li>
-                </ul>
-                <button type="button" class="pricing-select-btn tf-btn-2" onclick="selectPricingPlan('Starter Plan', 'Website Development', 'Below ₹25,000')">Select Starter Plan</button>
-              </div>
-
-              <!-- Plan 2 -->
-              <div class="pricing-mini-card featured">
-                <span class="plan-badge">Popular</span>
-                <div class="plan-price fw-bold">₹19,900 <span>/ year</span></div>
-                <div class="fw-semibold text-white mt-1" style="font-size: 14px;">Enterprise Plan</div>
-                <ul>
-                  <li><i class="fas fa-check-circle"></i> Everything in Starter Plan</li>
-                  <li><i class="fas fa-check-circle"></i> Advanced CI/CD deployment logic</li>
-                  <li><i class="fas fa-check-circle"></i> Custom evaluations dashboard</li>
-                  <li><i class="fas fa-check-circle"></i> Up to 3 API integrations & data sources</li>
-                </ul>
-                <button type="button" class="pricing-select-btn tf-btn" onclick="selectPricingPlan('Enterprise Plan', 'Web Application', '₹50,000 - ₹1,00,000')">Select Enterprise Plan</button>
-              </div>
-            </div>
-
+          <!-- Right side: Help Info -->
+          <div class="col-lg-4 ps-lg-4 border-start-lg" style="border-color: rgba(255,255,255,0.06);">
             <!-- Help Contact Options -->
-            <div class="help-section-wrap mt-4">
-              <h5 class="fw-semibold text-white mb-3" style="font-size: 16px;">Need Urgent Help?</h5>
+            <div class="help-section-wrap">
+              <h4 class="fw-semibold text-white mb-3" style="font-size: 20px;">Need Urgent Help?</h4>
               
               <a href="tel:+917769971133" class="help-option">
                 <i class="fas fa-phone-alt"></i>
@@ -358,33 +327,7 @@ const modalHTML = `
 </div>
 `;
 
-// Helper to select pricing plan and prefill/scroll to form
-window.selectPricingPlan = function(planName, projectType, budget) {
-  // Pre-fill type
-  const typeSelect = document.getElementById("modalProjectType");
-  if (typeSelect) {
-    typeSelect.value = projectType;
-  }
-  
-  // Pre-fill budget
-  const budgetSelect = document.getElementById("modalBudget");
-  if (budgetSelect) {
-    budgetSelect.value = budget;
-  }
-
-  // Pre-fill requirements starting text
-  const reqText = document.getElementById("modalRequirements");
-  if (reqText) {
-    reqText.value = `I am interested in the ${planName}.\nRequirements:\n`;
-    reqText.focus();
-  }
-
-  // Scroll form container into view on mobile
-  const formContainer = document.getElementById("formContainer");
-  if (formContainer) {
-    formContainer.scrollIntoView({ behavior: 'smooth' });
-  }
-};
+// Pricing plans removed from inquiry form
 
 // Initialize the modal component on DOM load
 document.addEventListener("DOMContentLoaded", function () {
