@@ -231,23 +231,24 @@ const modalStyles = `
   }
 
   #projectInquiryModal .nice-select::before {
-    content: "\\e901" !important;
-    font-family: "icomoon" !important;
-    position: absolute !important;
-    right: 16px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-    font-size: 10px !important;
-    color: var(--neutral-400) !important;
-    display: block !important;
-  }
-  
-  #projectInquiryModal .nice-select::after {
     display: none !important;
   }
   
-  #projectInquiryModal .nice-select.open::before {
-    transform: translateY(-50%) rotate(180deg) !important;
+  #projectInquiryModal .nice-select::after {
+    border-bottom: 2px solid var(--neutral-400, #a1a1aa) !important;
+    border-right: 2px solid var(--neutral-400, #a1a1aa) !important;
+    content: "" !important;
+    display: block !important;
+    right: 18px !important;
+    width: 8px !important;
+    height: 8px !important;
+    margin-top: -6px !important;
+    transform: rotate(45deg) !important;
+    transition: all 0.15s ease-in-out !important;
+  }
+  
+  #projectInquiryModal .nice-select.open::after {
+    transform: rotate(-135deg) !important;
   }
 
   #projectInquiryModal .nice-select .list {
