@@ -347,11 +347,11 @@ const modalHTML = `
                     <div class="form-group">
                       <label for="modalBudget">Budget Range *</label>
                       <select id="modalBudget" name="budget_range" class="inquiry-select">
-                        <option value="Below ₹25,000">Below ₹25,000</option>
+                        <option value="₹18,999 - ₹25,000">₹18,999 - ₹25,000</option>
                         <option value="₹25,000 - ₹50,000">₹25,000 - ₹50,000</option>
                         <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000</option>
-                        <option value="₹1,00,000 - ₹5,00,000">₹1,00,000 - ₹5,00,000</option>
-                        <option value="Above ₹5,00,000">Above ₹5,00,000</option>
+                        <option value="₹1,00,000 - ₹1,50,000">₹1,00,000 - ₹1,50,000</option>
+                        <option value="Above ₹1,50,000">Above ₹1,50,000</option>
                         <option value="custom">Custom / Enter Manually...</option>
                       </select>
                       <input type="text" id="modalCustomBudget" class="inquiry-input mt-2" placeholder="Enter custom budget (e.g. ₹75,000)" style="display: none;">
