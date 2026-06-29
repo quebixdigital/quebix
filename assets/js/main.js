@@ -329,4 +329,32 @@
         dot();
         viewbox();
     });
+
+    // Ensure preloader is shown for at least 2 seconds
+    var preloaderStartTime = Date.now();
+
+    var fadeOutPreloader = function() {
+        var $preloader = $("#preloader");
+        if ($preloader.length && !$preloader.hasClass("fade-out")) {
+            var elapsedTime = Date.now() - preloaderStartTime;
+            var remainingTime = Math.max(0, 2000 - elapsedTime);
+
+            setTimeout(function() {
+                $preloader.addClass("fade-out");
+                $("body").removeClass("preloader-active");
+                setTimeout(function() {
+                    $preloader.remove();
+                }, 400);
+            }, remainingTime);
+        }
+    };
+
+    $(window).on("load", function() {
+        fadeOutPreloader();
+    });
+
+    // Fallback: fade out preloader after 5 seconds in case of slow resource loads
+    setTimeout(function() {
+        fadeOutPreloader();
+    }, 5000);
 })(jQuery);
