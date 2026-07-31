@@ -4,7 +4,7 @@ const footerTemplate = `
             <div class="container">
                 <div class="footer-content">
                     <a href="index.html" class="footer-logo">
-                        <img src="assets/quebix-logo.png" alt="">
+                        <img src="assets/quebix-logo.png" alt="Quebix Digital - Digital Agency in Chinchwad, Pimpri Pune">
                     </a>
                     <div class="title h6 fw-semibold">Get connected <br> with Quebix Digital on social</div>
                     <div class="text">Don’t miss our new updates!</div>
